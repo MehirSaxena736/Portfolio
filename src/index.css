@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap');
+@import 'tailwindcss';
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --bg: #060a14;
+  --bg2: #08102a;
+  --surface: #0d1421;
+  --surface2: #111d32;
+  --border: #1e2d4a;
+  --border-dim: #0f1a2e;
+  --text: #dde8ff;
+  --text-2: #6888b0;
+  --text-3: #304560;
+  --cyan: #06b6d4;
+  --cyan-dim: rgba(6, 182, 212, 0.12);
+  --violet: #8b5cf6;
+  --violet-dim: rgba(139, 92, 246, 0.12);
+  --emerald: #10b981;
+  --emerald-dim: rgba(16, 185, 129, 0.12);
+  --amber: #f59e0b;
+  --amber-dim: rgba(245, 158, 11, 0.12);
+  --font-h: 'Outfit', sans-serif;
+  --font-b: 'DM Sans', sans-serif;
+  --nav-bg: rgba(6, 10, 20, 0.85);
+  --shadow: 0 4px 32px rgba(0, 0, 0, 0.4);
+}
+
+[data-theme="light"] {
+  --bg: #f0f5ff;
+  --bg2: #e6eefb;
+  --surface: #ffffff;
+  --surface2: #f4f8ff;
+  --border: #c8d5ed;
+  --border-dim: #dce8f8;
+  --text: #0a1425;
+  --text-2: #3a5070;
+  --text-3: #8fa3c8;
+  --cyan: #0891b2;
+  --cyan-dim: rgba(8, 145, 178, 0.1);
+  --violet: #7c3aed;
+  --violet-dim: rgba(124, 58, 237, 0.1);
+  --emerald: #059669;
+  --emerald-dim: rgba(5, 150, 105, 0.1);
+  --amber: #d97706;
+  --amber-dim: rgba(217, 119, 6, 0.1);
+  --nav-bg: rgba(240, 245, 255, 0.88);
+  --shadow: 0 4px 24px rgba(0, 60, 120, 0.12);
+}
+
+body {
+  font-family: var(--font-b);
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--text-3); }
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(28px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.spin-slow { animation: spin-slow 6s linear infinite; }
+
+.h0 { animation: fadeUp 0.7s ease both; }
+.h1 { animation: fadeUp 0.7s 0.12s ease both; }
+.h2 { animation: fadeUp 0.7s 0.24s ease both; }
+.h3 { animation: fadeUp 0.7s 0.36s ease both; }
+.h4 { animation: fadeUp 0.7s 0.48s ease both; }
+.float-anim { animation: float 5s ease-in-out infinite; }
+
+input, textarea {
+  font-family: var(--font-b);
+}
